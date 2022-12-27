@@ -13,7 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { SharedElement } from "react-navigation-shared-element";
 import { globalStyles } from "../../components";
 import { SharedScreenParamList } from "../../Navigation/types";
-import { useBookmark, useToggleTabBarVisibility } from "../../Hooks";
+import {  useToggleTabBarVisibility } from "../../Hooks";
 import moment from "moment-timezone";
 
 type ProductDetailsScreenProps = StackScreenProps<
@@ -30,7 +30,6 @@ const ProductDetails = ({ navigation, route }: ProductDetailsScreenProps) => {
         is_redemption,
         id,
   } = route.params;
-  const [addBookmark, removeBookmark, isBookmarked] = useBookmark(id);
   useToggleTabBarVisibility(navigation);
   const handleBackNavigation = () => navigation.goBack();
 

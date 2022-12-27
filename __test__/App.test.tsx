@@ -4,5 +4,5 @@ import App from "../App";
 
 it("renders App Screen Correctly", () => {
   const { getAllByText } = render(<App />);
-  expect(getAllByText("Book Details").length).toBeFalsy();
+  expect(getAllByText("Product Details").length).toBeFalsy();
 });

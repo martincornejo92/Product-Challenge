@@ -3,4 +3,8 @@ Product App Challange FEMSA
 Install
 
 - yarn install
-- yarn stProduct
+- yarn start or expo start
+
+TEST
+
+- yarn test

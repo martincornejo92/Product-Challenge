@@ -14,7 +14,6 @@ import {
   Loading,
   Rating,
 } from "../../../../components";
-import { useBookmark } from "../../../../Hooks";
 import { StoredProduct } from "../../../../models/Product";
 import { SharedScreenParamList } from "../../../../Navigation/types";
 
@@ -27,7 +26,6 @@ interface Props {
 }
 const Product = ({ data, variant = "horizontal" }: Props) => {
   const navigation = useNavigation<HomeScreenNavigationProps>();
-  const [addBookmark, removeBookmark, isBookmarked] = useBookmark(data.id);
   const toggleBookmark = () =>
     isBookmarked ? removeBookmark() : addBookmark(data);
   const isHorizontal = variant === "horizontal";
