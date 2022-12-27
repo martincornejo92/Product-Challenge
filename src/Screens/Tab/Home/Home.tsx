@@ -51,7 +51,7 @@ const Home = ({ navigation }: Props) => {
       setNewProduct(data.slice(1));
     }
     if(data !== null){
-      setPoint(data.map(item => item.points).reduce((prev, curr) => prev + curr, 0));
+      setPoint(data.map(item => item.is_redemption === true && item.points).reduce((prev, curr) => prev + curr, 0));
     }else{
       axios
     .get('https://6222994f666291106a29f999.mockapi.io/api/v1/products')
