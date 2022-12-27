@@ -11,11 +11,6 @@ const SharedElementStackNavigator = () => {
     <View style={{ flex: 1 }}>
       <Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
         <Screen name="Home" component={Home} />
-        {/* <Screen
-          name="Bookmarks"
-          component={Bookmarks}
-          options={{ animationEnabled: false }}
-        /> */}
         <Screen
           name="ProductDetails"
           component={ProductDetails}
